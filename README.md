@@ -1,6 +1,7 @@
 # Top Commenters Widget for OBS
 
-![Widget Preview](https://github.com/user-attachments/assets/5ee29f57-62eb-4456-8d10-f45629654c14)
+![Widget Preview](https://github.com/user-attachments/assets/e1f99aaa-6c2b-4ede-800f-619d72187164)
+
 
 
 A dynamic, customizable browser source widget for OBS Studio that displays and ranks top commenters in real-time with smooth animations.
