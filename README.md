@@ -27,8 +27,8 @@ A dynamic, customizable browser source widget for OBS Studio that displays and r
 1. Clone this repository:
 
 ```bash
-git clone https://github.com/yourusername/top-commenters-widget.git
-cd top-commenters-widget
+git clone https://github.com/EchoBotSystem/PlsInteractBot-Widget.git
+cd PlsInteractBot-Widget
 ```
 
 2. Install dependencies:
