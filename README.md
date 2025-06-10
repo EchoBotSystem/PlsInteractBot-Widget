@@ -50,6 +50,21 @@ cd PlsInteractBot-Widget
 - Set width to 800 and height to 600
 - Check "Custom CSS" option if you want to override styles
 
+### Connecting to a Real API
+
+To connect the widget to a real-time data source via WebSocket, you need to set the `VITE_TOP_COMMENTERS_WS_URL` environment variable.
+
+1. Create a new file named `.env` in the root directory of the project.
+2. Add the WebSocket URL to this file in the following format:
+
+   ```
+   VITE_TOP_COMMENTERS_WS_URL="ws://your-websocket-server.com/path"
+   ```
+
+   Replace `"ws://your-websocket-server.com/path"` with the actual URL of your WebSocket server.
+
+3. Restart the development server (`npm run dev`) or rebuild for production (`npm run build`) after creating or modifying the `.env` file for the changes to take effect.
+
 ### Production Build
 
 ```bash
