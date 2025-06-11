@@ -20,7 +20,7 @@ const CommenterCard: React.FC<CommenterCardProps> = ({
   positionChange,
 }) => {
   return (
-    <div className={`commenter-card ${isAnimating ? "animating" : ""}`}>
+    <div className={`commenter-card ${isAnimating ? "animating" : ""}`} role="listitem">
       <div className="commenter-info">
         <div className={`rank-icon rank-${rank}`}>{getRankIcon(rank)}</div>
 

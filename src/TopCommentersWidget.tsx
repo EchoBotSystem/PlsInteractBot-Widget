@@ -46,7 +46,7 @@ const TopCommentersWidget: React.FC = () => {
             </div>
           </div>
 
-          <div className="commenters-count">10</div>
+          <div className="commenters-count" data-testid="commenters-count">10</div>
         </div>
       </div>
 
