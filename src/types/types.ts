@@ -1,6 +1,6 @@
 export interface Commenter {
-  username: string;
-  displayName: string;
-  comments: number;
-  avatar: string | null;
+  userId: string;
+  userLogin: string;
+  messageCount: number;
+  profileImageUrl: string | null;
 }

@@ -1,7 +1,6 @@
 import type { Commenter } from "../../types/types";
 import { getRankIcon } from "../../utils/functions";
 
-
 interface CommenterCardProps {
   commenter: Commenter;
   rank: number;
@@ -20,17 +19,20 @@ const CommenterCard: React.FC<CommenterCardProps> = ({
   positionChange,
 }) => {
   return (
-    <div className={`commenter-card ${isAnimating ? "animating" : ""}`} role="listitem">
+    <div
+      className={`commenter-card ${isAnimating ? "animating" : ""}`}
+      role="listitem"
+    >
       <div className="commenter-info">
         <div className={`rank-icon rank-${rank}`}>{getRankIcon(rank)}</div>
 
         <div className="avatar-container">
           <img
             src={
-              commenter.avatar ||
-              `https://api.dicebear.com/7.x/avataaars/svg?seed=${commenter.username}`
+              commenter.profileImageUrl ||
+              `https://api.dicebear.com/7.x/avataaars/svg?seed=${commenter.userLogin}`
             }
-            alt={commenter.username}
+            alt={commenter.userLogin}
             className="avatar"
             onError={(e: React.SyntheticEvent<HTMLImageElement, Event>) => {
               const target = e.target as HTMLImageElement;
@@ -40,16 +42,15 @@ const CommenterCard: React.FC<CommenterCardProps> = ({
         </div>
 
         <div className="commenter-names">
-          <span className="username">{commenter.username}</span>
-          <span className="display-name">
-            {commenter.displayName || commenter.username}
-          </span>
+          <span className="username">{commenter.userLogin ?? "NoName"}</span>
         </div>
       </div>
 
       <div className="comment-stats">
         <div className="comments-count">
-          <span className="count">{commenter.comments.toLocaleString()}</span>
+          <span className="count">
+            {commenter.messageCount.toLocaleString()}
+          </span>
           <span className="label">comments</span>
         </div>
 
