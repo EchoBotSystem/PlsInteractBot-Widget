@@ -1,0 +1,125 @@
+.top3-commenters-widget {
+  width: 300px;
+  padding: 20px;
+  background: transparent;
+  border-radius: 12px;
+  font-family: "Arial", sans-serif;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.podium {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 10px;
+  margin-bottom: 20px;
+  height: 200px;
+}
+
+.podium-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  min-width: 80px;
+}
+
+.podium-item.first {
+  order: 2;
+  margin-bottom: 40px;
+}
+
+.podium-item.second {
+  order: 1;
+  margin-bottom: 10px;
+}
+
+.podium-item.third {
+  order: 3;
+  margin-bottom: 0px;
+}
+
+.avatar-container {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 8px;
+  background: #ffa726;
+  border: 3px solid #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.username {
+  font-size: 12px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 4px;
+  max-width: 70px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.message-count {
+  font-size: 16px;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 8px;
+}
+
+.position-badge {
+  background: #34495e;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+  min-width: 35px;
+}
+
+.podium-item.first .position-badge {
+  background: #f1c40f;
+  color: #2c3e50;
+}
+
+.podium-item.second .position-badge {
+  background: #95a5a6;
+  color: white;
+}
+
+.podium-item.third .position-badge {
+  background: #e67e22;
+  color: white;
+}
+
+.title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-top: 10px;
+}
+
+/* Animaciones hover */
+.podium-item {
+  transition: transform 0.2s ease;
+}
+
+.podium-item:hover {
+  transform: translateY(-5px);
+}
+
+.avatar-container {
+  transition: transform 0.2s ease;
+}
+
+.podium-item:hover .avatar-container {
+  transform: scale(1.1);
+}

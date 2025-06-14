@@ -34,8 +34,11 @@ const useTopCommentersWebSocket = (): { commenters: Commenter[] } => {
     }
 
     return () => {
+      console.log("unmount....", ws.current?.readyState);
       if (ws.current && ws.current.readyState === WebSocket.OPEN) {
+        console.log("Closing connection....");
         ws.current.close();
+        prompt("sadad");
       }
     };
   }, []);

@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef, useMemo } from "react";
 import CommenterCard from "./components/CommenterCard/CommenterCard";
 import useTopCommentersWebSocket from "./hooks/useTopCommentersWebSocket";
+import TopCommentersGrid from "./pages/TopCommentersGrid/TopCommentersGrid";
 
 // Componente principal
 const TopCommentersWidget: React.FC = () => {
