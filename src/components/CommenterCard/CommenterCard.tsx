@@ -11,7 +11,7 @@ interface CommenterCardProps {
 const defaultAvatar =
   "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%236366f1'/%3E%3Ccircle cx='50' cy='35' r='15' fill='white'/%3E%3Cpath d='M25 85 Q25 65 50 65 Q75 65 75 85 Z' fill='white'/%3E%3C/svg%3E";
 
-// Componente para cada comentador individual
+// Component for each individual commenter
 const CommenterCard: React.FC<CommenterCardProps> = ({
   commenter,
   rank,

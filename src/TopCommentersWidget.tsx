@@ -1,9 +1,8 @@
 import React, { useState, useEffect, useRef, useMemo } from "react";
 import CommenterCard from "./components/CommenterCard/CommenterCard";
 import useTopCommentersWebSocket from "./hooks/useTopCommentersWebSocket";
-import TopCommentersGrid from "./pages/TopCommentersGrid/TopCommentersGrid";
 
-// Componente principal
+// Main component
 const TopCommentersWidget: React.FC = () => {
   const [animatingCommenters, setAnimatingCommenters] = useState<Set<string>>(
     new Set()
@@ -41,7 +40,7 @@ const TopCommentersWidget: React.FC = () => {
     previousPositions.current = currentPositions;
     setAnimatingCommenters(movedCommenters);
 
-    // Limpiar animaciones después de 1 segundo
+    // Clear animations after 1 second
     setTimeout(() => {
       setAnimatingCommenters(new Set<string>());
     }, 1000);

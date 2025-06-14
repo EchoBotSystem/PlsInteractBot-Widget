@@ -5,7 +5,7 @@ import useTopCommentersWebSocket from "../../hooks/useTopCommentersWebSocket";
 const TopCommenters: React.FC = () => {
   const { commenters: wsCommenters } = useTopCommentersWebSocket();
 
-  // Reorganizar para mostrar en orden: 2do, 1ro, 3ro
+  // Reorganize to display in order: 2nd, 1st, 3rd
   const displayOrder =
     wsCommenters.length >= 3
       ? [wsCommenters[1], wsCommenters[0], wsCommenters[2]]
@@ -26,7 +26,7 @@ const TopCommenters: React.FC = () => {
   };
 
   const generateAvatar = (userLogin: string): string => {
-    // Generar un avatar simple basado en las iniciales
+    // Generate a simple avatar based on initials
     const initials = userLogin.slice(0, 2).toUpperCase();
     const colors = [
       "#FF6B6B",
@@ -79,7 +79,7 @@ const TopCommenters: React.FC = () => {
           </div>
         ))}
       </div>
-      <div className={styles["title"]}>Top comentarios</div>
+      <div className={styles["title"]}>Top Commenters</div>
     </div>
   );
 };
